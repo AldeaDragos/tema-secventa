@@ -260,7 +260,7 @@ void nrSecvente(int v[], int dim, int t, int k) {
 
 			if (v[j] <= t) {
 
-				if (j - i > dmax - smax)) {
+				if (j - i > dmax - smax) {
 					smax = i;
 					dmax = j;
 					ct++;
@@ -268,7 +268,7 @@ void nrSecvente(int v[], int dim, int t, int k) {
 			}
 		}
 	}
-	out << "Numarul de secvente de lungime " << k << " cu valori mai mici sau egale cu " << t << " este: " << ct << endl;
+	cout << "Numarul de secvente de lungime " << k << " cu valori mai mici sau egale cu " << t << " este: " << ct << endl;
 }
 
 void SecvEgale1(int v[], int dim) {
@@ -279,8 +279,29 @@ void SecvEgale1(int v[], int dim) {
 	for (int i = 0; i < dim; i++) {
 		for (int j = i + 1; j < dim; j++) {
 			if (v[i] == v[j]) {
-	
 
+
+			}
 		}
 	}
+}
+
+
+void SecvEgale2(int v[], int dim) {
+
+	int ct = 0;
+
+
+	for (int i = 0; i < dim; i++) {
+	
+			int j = i;
+
+			while (j + 1 < dim && v[j] == v[j + 1]) {
+				j++;
+			}
+
+			ct++;
+			i = j;
+		}
+	cout << "Numarul de secvente cu elemente egale este: " << ct << endl;
 }

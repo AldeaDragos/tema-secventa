@@ -158,3 +158,14 @@ void tm8() {
 
 
 }
+
+//Se dă un vector cu n elemente, numere naturale. Determinați câte secvențe ale vectorului au toate elementele egale.
+void tm9() {
+
+	int date[] = { 4,3,3,5 };
+
+	int dim = 8;
+
+	SecvEgale2(date, dim);
+
+}
